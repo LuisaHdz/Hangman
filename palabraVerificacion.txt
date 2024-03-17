@@ -1,0 +1,49 @@
+fun existeLetra(letter: Char) {
+        var cambios = 0
+
+        if (guessedLetters.contains(letter)) {
+            //Si la letra ya se intento anteriormente
+            Toast.makeText(
+                this@MainActivity,
+                getString(R.string.guessedLetters, letter), Toast.LENGTH_SHORT
+            ).show()
+        } else {
+            //Se guarda la letra adivinada para llevar un control
+            guessedLetters.add(letter)
+            //Se revisa si la letra esta contenida en la palabra a adivinar
+            for (i in wordToGuess.indices) {
+                if (wordToGuess[i] == letter) {
+                    //Si la letra coincide, se llena el espacio
+                    currentGuess.setCharAt(i, letter)
+                    cambios += 1
+                }
+            }
+
+            if (cambios == 0) {
+                errorLimit -= 1
+                if (errorLimit != 0) {
+                    Toast.makeText(
+                        this@MainActivity, getString(R.string.notFound, letter) +
+                                getString(R.string.attemps, errorLimit), Toast.LENGTH_LONG
+                    ).show()
+                } else {
+                    //Ya no le quedan oportunidades al usuario
+                    Toast.makeText(this@MainActivity, getString(R.string.lose),Toast.LENGTH_SHORT).show()
+                }
+
+            }else{
+                //Se muestra la modificacion
+                findViewById<TextView>(R.id.tvAnswer).text = currentGuess
+
+                if (currentGuess.toString() == wordToGuess) {
+                    //El jugador gana, es decir, adivina todas las letras
+                    Toast.makeText(this@MainActivity, getString(R.string.win), Toast.LENGTH_SHORT)
+                        .show()
+                }else{
+                    //La letra esta en la palabra
+                    Toast.makeText(this@MainActivity, getString(R.string.correctGuess),Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+
+    }

@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name" translatable="false">Hangman</string>
+    <string name="creator">Creador</string>
+    <string name="version">Versión </string>
+    <string name="versionOutput">Versión: %1$s </string>
+    <string name="creatorOutput">Creador: %1$s</string>
+    <string name="instructions">Adivina la palabra antes de quedarte sin cabeza</string>
+    <string name="verify">Verificar</string>
+    <string name="guess">Intenta una letra</string>
+    <string name="ingresa_letra">Debes ingresar una letra</string>
+    <string name="no_connection">No hay conexión \n Intentalo de nuevo</string>
+    <string name="hint">Pista</string>
+    <string name="hintOutput">Pista: %1$s</string>
+    <string name="answer">Respuesta</string>
+
+    <string name="lose">¡Has perdido! :(  \n Vuelve a intentarlo </string>
+    <string name="win">¡Has ganado, bien hecho! :)</string>
+    <string name="correctGuess">¡Has adivinado una letra, sigue así!</string>
+    <string name="guessedLetters">La letra %1$s ya fue adivinada</string>
+    <string name="notFound">La letra %1$s no se encuentra en la palabra \n Te quedan %2$d intentos </string>
+    <string name="attemps">Te quedan %1$d intentos</string>
+    <string name="end">Salir</string>
+    <string name="messageLoser">Has perdido :( \n La respuesta correcta era:</string>
+    <string name="newGame">Jugar \n de \n nuevo</string>
+    <string name="messageWinner">¡Ganaste!\n¡Felicidades!</string>
+    <string name="decision">¿Que deseas hacer?</string>
+    <string name="response">Datos: %1$s</string>
+    <string name="elseWhen">Falló la eliminacion de imagenes</string>
+    <string name="bundle_null">Bundle: NULL</string>
+    <string name="bundleData">Bundle: %1$s</string>
+    <string name="digits">abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ</string>
+    <string name="accept">Aceptar</string>
+
+    <string name="tryAgain">Volver a \n intentar</string>
+
+</resources>
